@@ -10,7 +10,7 @@ Just import the whole module:
 import { comb, curry, flip, id, partial, pipe } from 'https://raw.githubusercontent.com/denowiz/combinators/master/mod.js'
 ```
 
-Then use the functions.
+Or import each functions.
 
 ## Documentation
 
@@ -19,6 +19,8 @@ Then use the functions.
 Compose functions into a new function:
 
 ```javascript
+import comp from 'https://raw.githubusercontent.com/denowiz/combinators/master/comp.js'
+
 const f1 = x => `f1(${x})`;
 const f2 = x => `f2(${x})`;
 const f3 = x => `f3(${x})`;
@@ -33,6 +35,8 @@ fn('x') //=> f1(f2(f3(x)))
 Creates an curried function that takes one argument at the time
 
 ```javascript
+import curry from 'https://raw.githubusercontent.com/denowiz/combinators/master/curry.js'
+
 const sum = (x, y) => x + y;
 curry(sum)(1)(2) //=> 3
 ```
@@ -42,6 +46,8 @@ curry(sum)(1)(2) //=> 3
 Reverse the order of arguments of the given function.
 
 ```javascript
+import flip from 'https://raw.githubusercontent.com/denowiz/combinators/master/flip.js'
+
 const strConcat = (s1, s2) => s1 + ' ' + s2
 flip(strConcat)("hello", "world") //=> "world hello"
 ```
@@ -51,6 +57,8 @@ flip(strConcat)("hello", "world") //=> "world hello"
 The identity function
 
 ```javascript
+import id from 'https://raw.githubusercontent.com/denowiz/combinators/master/id.js'
+
 id('x') //=> x
 ```
 
@@ -61,6 +69,8 @@ another function that receives the rest of arguments. If the given
 arguments are the same that the function needs, then it will be applied to it.
 
 ```javascript
+import partial from 'https://raw.githubusercontent.com/denowiz/combinators/master/partial.js'
+
 const sum = (x, y, z) => x + y + z;
 const sum2 = partial(sum, 2);
 
@@ -72,6 +82,8 @@ sum2(3, 4) //=> 9
 Does the same of `comp` function, but in the reversed order
 
 ```javascript
+import pipe from 'https://raw.githubusercontent.com/denowiz/combinators/master/pipe.js'
+
 const f1 = x => `f1(${x})`;
 const f2 = x => `f2(${x})`;
 const f3 = x => `f3(${x})`;
