@@ -1,13 +1,13 @@
 # Combinators
 
-Simply combinators to use.
+Simple functions to combine with another functions.
 
 ## How to use
 
 Just import the whole module:
 
 ```javascript
-import { comb, curry, flip, id, partial, pipe } from 'https://..';
+import { comb, curry, flip, id, partial, pipe } from 'https://raw.githubusercontent.com/denowiz/combinators/master/mod.js'
 ```
 
 Then use the functions.
